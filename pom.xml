@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ai</groupId>
-	<artifactId>Backend files</artifactId>
+	<artifactId>Backend-files</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpringAIProject</name>
 	<description>Demo project for Spring Boot</description>
