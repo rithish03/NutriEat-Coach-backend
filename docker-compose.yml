@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend:
+    image: project-deployment
+    container_name: spring_backend
+    build: .
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:16
+    container_name: spring_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Rithi
+      POSTGRES_DB: springaiproject
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
